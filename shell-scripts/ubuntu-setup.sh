@@ -4,7 +4,7 @@ sudo systemctl disable snapd.service
 sudo apt-get purge snapd -y
 sudo rm -rf /var/cache/snapd/
 rm -rf ~/snap
-sudo cat > /etc/apt/preferences.d/nosnap << EOF
+sudo tee /etc/apt/preferences.d/nosnap > /dev/null << EOF
 Package: snapd
 Pin: release a=*
 Pin-Priority: -10
